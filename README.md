@@ -1,6 +1,7 @@
 🎵 Spin City Market - Vinyl Marketplace
 Spin City Market is a full-stack web application where users can browse, list, and manage vinyl record listings. It provides a dynamic online marketplace for vinyl enthusiasts to discover new records, post their own for sale, and manage listings with ease.
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🌐 Features
 🖼️ Create Listings: Upload images and enter details for each vinyl (title, artist, condition, price, and more).
 
@@ -14,6 +15,7 @@ Spin City Market is a full-stack web application where users can browse, list, a
 
 💅 Styled Views: Clean, user-friendly interface using EJS templating and CSS.
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🛠️ Tech Stack
 Backend: Node.js, Express.js, MongoDB (via Mongoose)
 
@@ -39,6 +41,7 @@ Form validation with clear error messaging
 
 Data persistence through MongoDB Atlas, scoped to a specific marketplace collection​
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🧰 Getting Started
 Install dependencies:
 
