@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Spin City Market - Item page</title>
+
+    <link rel="stylesheet" href="/assets/css/item.css" />
+</head>
+<body id="body-items">
+    <!-- Header -->
+    <%- include('partials/header') %>
+    <br>
+    <br>
+    <main>
+        <div class="item-container">
+            <div class="item">
+                <img src="<%= item.image %>" alt="<%= item.title %>" />
+            </div>
+            <div class="description-container">
+                <h1><%= item.title %></h1>
+                <h3><%= item.artist %></h3>
+                <br>
+                <h4><b>Seller:</b> <%= item.seller %></h4>
+                <p><b>Condition:</b> <%= item.condition %></p>
+                <!-- CITATION: https://www.w3schools.com/jsref/jsref_tofixed.asp -->
+                 <!-- ^ fixes the price format. -->
+                <p><b>Price:</b> $<%= item.price.toFixed(2) %> <span> | <%= item.offers || 0 %> offers</span></p>
+                <p><%= item.details %></p>
+                <br>
+                <div class="button-container">
+                    <a href="/items/<%= item.id %>/edit" class="edit-button">Edit</a>
+                    <form action="/items/<%= item.id %>/delete" method="POST" style="margin: 0; padding: 0;">
+                        <button type="submit" class="delete-button">Delete</button>
+                    </form>
+                </div>
+                                         
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+</body>
+</html>

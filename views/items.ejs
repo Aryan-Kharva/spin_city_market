@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Spin City Market - Browse</title>
+
+    <link rel="stylesheet" href="/assets/css/items.css" />
+</head>
+<body id="body-items">
+    <!-- Header -->
+    <%- include('partials/header') %>
+
+    <main>
+        <img class="center" src="/assets/images/header1.png" alt="Available Vinyl Records" />
+    
+        <div class="item-container">
+            <% if (items.length === 0) { %>
+                <p>There is no item that matches your search criteria.</p>
+            <% } else { %>
+                <% items.forEach(item => { %>
+                <div class="item">
+                    <a href="/items/<%= item.id %>">
+                        <img src="<%= item.image %>" alt="<%= item.title %>" />
+                        <div class="item-content">
+                            <h3><%= item.title %></h3>
+                            <h4><%= item.artist %></h4>
+                            <p><b>Condition:</b> <%= item.condition %></p>
+                            <!-- CITATION: https://www.w3schools.com/jsref/jsref_tofixed.asp -->
+                            <!-- ^ fixes the price format. -->
+                            <div class="price-offers">
+                                <p>Price: <span>$<%= item.price.toFixed(2) %></span></p>
+                                <p><span class="span2">0 offers</span></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <% }) %>
+            <% } %>
+        </div>
+        
+    </main>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+</body>
+</html>

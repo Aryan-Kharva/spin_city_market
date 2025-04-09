@@ -1,0 +1,24 @@
+<header>
+    <div class="header-container">
+        <!-- logo -->
+        <a href="/" class="logo">
+            <img src="/assets/images/logo.png" alt="Spin City Market Logo">
+        </a>
+
+        <!-- search bar -->
+        <form class="search-bar" action="/items" method="GET">
+            <input type="text" name="search" placeholder="Search for records..." value="<%= searchQuery || '' %>">
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- nav bar -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/items">Browse</a></li>
+                <li><a href="/new">Sell</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Spin City Market - New Listing</title>
+
+    <link rel="stylesheet" href="/assets/css/new.css" />
+</head>
+<body id="body-items">
+    <!-- Header -->
+    <%- include('partials/header') %>
+
+    <main>
+        <div class="form-container">
+            <img class="center" src="/assets/images/header2.png" alt="Available Vinyl Records" />
+            <form action="/items" method="POST" enctype="multipart/form-data" class="new-item-form">
+                <label for="condition">Condition</label>
+                <select id="condition" name="condition" required>
+                    <option value="">-- Select Condition --</option>
+                    <option value="Mint">Mint</option>
+                    <option value="Near Mint">Near Mint</option>
+                    <option value="Very Good">Very Good</option>
+                    <option value="Good">Good</option>
+                    <option value="Poor">Poor</option>
+                </select>
+
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter Title" required>
+
+                <label for="artist">Artist</label>
+                <input type="text" id="artist" name="artist" placeholder="Enter Artist Name" required>
+
+                <label for="seller">Seller</label>
+                <input type="text" id="seller" name="seller" placeholder="Enter Seller Name" required>
+
+                <label for="price">Price</label>
+                <input type="number" id="price" name="price" min="0" step="0.01" placeholder="0.00" required>
+
+                <label for="details">Details</label>
+                <textarea id="details" name="details" rows="5" placeholder="Enter Details" required></textarea>
+
+                <label for="image">Image</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+</body>
+</html>
