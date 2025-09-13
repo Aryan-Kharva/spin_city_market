@@ -1,4 +1,4 @@
-🎵 Spin City Market - Vinyl Marketplace
+# 🎵 Spin City Market - Vinyl Marketplace
 Spin City Market is a full-stack web application where users can browse, list, and manage vinyl record listings. It provides a dynamic online marketplace for vinyl enthusiasts to discover new records, post their own for sale, and manage listings with ease.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
